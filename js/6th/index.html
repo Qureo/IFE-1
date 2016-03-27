@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="input.js"></script>
+    <style>
+        .number{
+            background-color: red;
+            padding: 3px;
+            float: left;
+            margin:4px;
+        }
+        .input{
+            margin: 2px 4px;
+            border-radius: 10px;
+        }
+        #list{
+            float: none;
+        }
+    </style>
+</head>
+<body>
+<div id="head">
+    <form>
+        <input type="text" class="input" id="value">
+        <input type="button" class="input" value="左侧入" onclick="leftIn()">
+        <input type="button" class="input" value="右侧入" onclick="rightIn()">
+        <input type="button" class="input" value="左侧出" onclick="leftOut()">
+        <input type="button" class="input" value="右侧出" onclick="rightOut()">
+    </form>
+
+</div>
+<div id="list">
+
+</div>
+</body>
+</html>
