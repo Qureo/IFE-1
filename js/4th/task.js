@@ -8,13 +8,16 @@ function addAqiData(){
     var weather = document.getElementById("aqi-value-input").value;
     var check1 = new RegExp("[\\u4E00-\\u9FFF]+","g");
     var check2 = new RegExp("^-?\\d+$","g");
-    if(check1.exec(city.trim())){
+    var reg = /\s/g;
+    city = city.replace(reg,"");
+    weather = weather.replace(reg,"");
+    if(check1.exec(city)){
         aqiData[0] = city;
     }else{
         alert("请按要求输入城市名称");
         aqiData[0]=null ;
     }
-    if(check2.exec(weather.trim())){
+    if(check2.exec(weather)){
         aqiData[1] = weather;
     }else{
         alert("请按要求输入空气质量");
